@@ -9,7 +9,7 @@ install: clean build
 	pip install dist/*
 
 upload: clean build
-	twine upload dist/*
+	python -m twine upload dist/*
 
 test:
 	pytest

@@ -1,3 +1,6 @@
+from trains.web import app
+from trains.models import create_tables
+
 def main():
-    # Start a web server?
-    return "Here's the entry point"
+    create_tables()
+    app.run('localhost', debug=True)

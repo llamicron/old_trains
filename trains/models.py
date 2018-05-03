@@ -53,12 +53,44 @@ class Volunteer(Model):
                     unit=int(vol['unit'])
                 ).save()
 
+class Training(Model):
+    code = CharField()
+
+    class Meta:
+        database = db
+
+    @staticmethod
+    def populate(data_file):
+        pass
+        # Read from csv like on Volunteer
+
+
+class Role(Model):
+    role = CharField()
+
+    class Meta:
+        database = db
+
+    @staticmethod
+    def populate():
+        pass
+        # Read from csv like on Volunteer
+
+
 def create_tables():
     db_file = 'trains/data/trains.db'
 
     if not os.path.isfile(db_file):
         open(db_file, 'w')
+
     Volunteer.create_table(True)
+    Training.create_table(True)
+    Role.create_table(True)
+
+def update_all():
+    Volunteer.populate()
+    # Training.populate()
+    # Role.populate()
 
 if __name__ == '__main__':
     create_tables()

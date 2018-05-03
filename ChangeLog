@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* After first build
 * Adds flask
 * Adds a very basic mailer class
 * makes it good
