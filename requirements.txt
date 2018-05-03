@@ -1,1 +1,1 @@
-SQLAlchemy==1.2.7
+peewee==3.3.2

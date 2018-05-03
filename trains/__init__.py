@@ -1,7 +1,3 @@
-import sqlalchemy
-
 def main():
+    # Start a web server?
     return "Here's the entry point"
-
-if __name__ == '__main__':
-    main()
